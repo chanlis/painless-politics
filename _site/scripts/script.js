@@ -1,16 +1,5 @@
-// Loads HTML DOM
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    addLeftArticles();
-    addRightArticles();
-});
-<<<<<<< HEAD
-*/
-=======
-
 // url array to be stored as a variable
 var desArr;
->>>>>>> f485d552eebc9df39bb2dc82973806116cfb8912
 
 // Returns a Promise that in turn returns an array of articles about the given search query
 function getArticles(topic) {
@@ -34,6 +23,7 @@ function getArticles(topic) {
         }))
 }
 
+/*
 // adds first 6 urls to an array of urls
 function buildDescriptionArray(topic) {
     getArticles(topic).then(data) => {
@@ -54,7 +44,7 @@ function rateDescriptions {
         })
         ).then(function(res) { console.log(res) });
 }
-}
+}*/
 
 // Adds articles to the left column related to the given search query
 function addLeftArticles(topic) {
@@ -63,7 +53,6 @@ function addLeftArticles(topic) {
     getArticles(topic).then((data) => {
 
         // The parameter 'data' is the array of articles
-
         var leftArticleList = "";
 
         // Build HTML to list 3 most recent articles
@@ -89,9 +78,3 @@ function addRightArticles(topic) {
         document.getElementById("right").insertAdjacentHTML('beforeend', rightArticleList);
     })
 }
-
-
-
-
-
-
