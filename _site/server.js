@@ -1,6 +1,11 @@
+import urlArr from "script.js";
+
+
 const express = require('express')
 const app = express()
 
+// text array
+var txtArr;
 
 var request = require('request');
 
@@ -10,15 +15,15 @@ app.use(function(req, res, next) {
   next();
 });
 
+for(var i = 0; i < urlArr.length; i ++) {
+  app.get('/', (req, res) => {
 
-app.get('/', (req, res) => {
-
-	var options = {
-		url: 'https://api.aylien.com/api/v1/extract',
+	 var options = {
+	 	url: 'https://api.aylien.com/api/v1/extract',
 		type: 'get',
   		qs: {
         // this url is hard coded...
-  			url: "https://www.nytimes.com/2018/01/27/business/its-not-a-roar-but-the-global-economy-is-finally-making-noise.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=first-column-region&region=top-news&WT.nav=top-news",
+  			url: urlArr[i];
     		best_image: false,
     	},
    		headers: {
@@ -37,5 +42,7 @@ app.get('/', (req, res) => {
 
    	request(options, callback);
 })
+
+}
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
