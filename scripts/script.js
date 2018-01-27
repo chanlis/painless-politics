@@ -57,7 +57,7 @@ function addLeftArticles(topic) {
 
         // Build HTML to list 3 most recent articles
         for (var i = 0; i < 3; i++) {
-            leftArticleList = leftArticleList + "<a href=" + data[i].url + ", class=\'article\'><p>" + data[i].title + "</p></a>";
+            leftArticleList = leftArticleList + "<a href=\"" + data[i].url + "\" class=\'article\'><p>" + data[i].title + "</p></a>";
         }
 
         // Insert HTML in left div
@@ -71,7 +71,7 @@ function addRightArticles(topic) {
     getArticles(topic).then((data) => {
         var rightArticleList = "";
         for (var i = 0; i < 3; i++) {
-            rightArticleList = rightArticleList + "<a href=" + data[i].url + ", class=\'article\'><p>" + data[i].title + "</p></a>";
+            rightArticleList = rightArticleList + "<a href=\"" + data[i].url + "\" class=\'article\'><p>" + data[i].title + "</p></a>";
         }
 
         // Insert HTML in right div
