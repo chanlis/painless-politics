@@ -23,17 +23,13 @@ function getArticles(topic) {
         }))
 }
 
-/*
-// adds first 6 urls to an array of urls
-function buildDescriptionArray(topic) {
-    getArticles(topic).then(data) => {
-        for(var i = 0; i < 6; i++) {
-            desArr.push(data[i].description);
-        }
-    }
-}
+var left = [];
+var right = [];
 
-function rateDescriptions {
+function classifyArticles(topic) {
+    // If you want to do something with the array of articles, use the following call
+    getArticles(topic).then((data) => {
+
     for (var i = 0; i < desArr.length; i++) {
         $.post(
         'https://apiv2.indico.io/political',
@@ -42,39 +38,41 @@ function rateDescriptions {
             'data': desArr[i],
             'threshold': 0.25
         })
-        ).then(function(res) { console.log(res) });
+        ).then(function(res) { 
+            while(left.length < 3 && right.length < 3) {
+                if(left.length < 3 && res.liberal > res.conservative) {
+                    data[i].leaning(res.liberal);
+                    left.push(data[i]);
+                }
+                else {
+                    data[i].leaning(res.conservative);
+                    right.push(data[i]);
+                }
+            } });
 }
-}*/
+})
+}
 
 // Adds articles to the left column related to the given search query
-function addLeftArticles(topic) {
+function addArticles(topic) {
 
-    // If you want to do something with the array of articles, use the following call
-    getArticles(topic).then((data) => {
-
+    
         // The parameter 'data' is the array of articles
         var leftArticleList = "";
+        var rightArticleList = "";
 
         // Build HTML to list 3 most recent articles
         for (var i = 0; i < 3; i++) {
-            leftArticleList = leftArticleList + "<a href=" + data[i].url + ", class=\'article\'><p>" + data[i].title + "</p></a>";
+            leftArticleList = leftArticleList + "<a href=" + left[i].url + ", class=\'article\'><p>" + left[i].title + "</p>"
+            + "<p>" + left[i].leaning + "</p></a>";
+            rightArticleList = rightArticleList + "<a href=" + data[i].url + ", class=\'article\'><p>" + data[i].title + "</p>"
+            + "<p>" + right[i].leaning + "</p></a>";;
         }
 
         // Insert HTML in left div
         document.getElementById("left").insertAdjacentHTML('beforeend', leftArticleList);
-    })
-}
-
-// Adds articles to the right column related to the given search query
-function addRightArticles(topic) {
-
-    getArticles(topic).then((data) => {
-        var rightArticleList = "";
-        for (var i = 0; i < 3; i++) {
-            rightArticleList = rightArticleList + "<a href=" + data[i].url + ", class=\'article\'><p>" + data[i].title + "</p></a>";
-        }
-
         // Insert HTML in right div
         document.getElementById("right").insertAdjacentHTML('beforeend', rightArticleList);
-    })
 }
+
+
