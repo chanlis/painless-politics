@@ -43,7 +43,7 @@ function addLeftArticles(topic) {
         }
 
         // Insert HTML in left div
-        document.getElementById("left").innerHTML = leftArticleList;
+        document.getElementById("left").insertAdjacentHTML('beforeend', leftArticleList);
     })
 }
 
@@ -57,7 +57,7 @@ function addRightArticles(topic) {
         }
 
         // Insert HTML in right div
-        document.getElementById("right").innerHTML = rightArticleList;
+        document.getElementById("right").insertAdjacentHTML('beforeend', rightArticleList);
     })
 }
 
