@@ -1,0 +1,17 @@
+---
+layout: default
+title: Painless Politics
+---
+    <header>
+            <h1>I want to learn about...</h1>
+    </header>
+
+    <div id="topics">
+        <ul>
+            {% for topic in site.data.topics %}
+            <a href="{{ topic.link }}"><li>{{ topic.name }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    

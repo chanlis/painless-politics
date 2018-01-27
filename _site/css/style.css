@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+body {
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: #b6eddd;
+}
+
+a:visited {
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 36px;
+}
+
+#topics {
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+}
+
+#topics li {
+    list-style: none;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    display: flex;
+}
