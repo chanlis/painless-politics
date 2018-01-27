@@ -10,15 +10,15 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: grey;
 }
 
 a:hover {
-    background-color: #b6eddd;
+    color:black;
 }
 
 a:visited {
-    color: black;
+    color:grey;
 }
 
 header {
@@ -40,10 +40,20 @@ header {
     list-style: none;
 }
 
-.left {
+.articles {
     display: flex;
+    justify-content: space-around;
 }
 
-.right {
+#left {
     display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
