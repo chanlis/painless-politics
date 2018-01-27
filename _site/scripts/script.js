@@ -1,15 +1,10 @@
 // Loads HTML DOM
+/*
 document.addEventListener('DOMContentLoaded', function () {
-    addLeftArticles('planned-parenthood');
-    addRightArticles('donald-trump');
+    addLeftArticles();
+    addRightArticles();
 });
-
-// this gets data from server!! res = article text
-$.ajax({
-    url: 'http://localhost:3000'
-   }
-).then(function(res) { console.log(res) });
-
+*/
 
 // Returns a Promise that in turn returns an array of articles about the given search query
 function getArticles(topic) {

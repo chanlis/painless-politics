@@ -1,9 +1,10 @@
 // Loads HTML DOM
+/*
 document.addEventListener('DOMContentLoaded', function () {
-    addLeftArticles('planned-parenthood');
-    addRightArticles('donald-trump');
+    addLeftArticles();
+    addRightArticles();
 });
-
+*/
 
 // Returns a Promise that in turn returns an array of articles about the given search query
 function getArticles(topic) {
