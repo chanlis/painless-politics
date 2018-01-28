@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +31,37 @@ header {
     font-size: 36px;
 }
 
+@keyframes typing {
+    from {width: 0 }
+    to {width: 100%}
+}
+
+
+header, h1 {
+    -webkit-animation: fadein 1s; // Safari, Chrome and Opera > 12.1 
+    -moz-animation: fadein 1s; // Firefox < 16 
+    -ms-animation: fadein 1s; // Internet Explorer 
+    animation: fadein 1s;
+}
+
+body, a {
+    -webkit-animation: fadein 2s; // Safari, Chrome and Opera > 12.1 
+       -moz-animation: fadein 2s; // Firefox < 16 
+        -ms-animation: fadein 2s; // Internet Explorer 
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+ Safari, Chrome and Opera > 12.1 
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 #topics {
     display: flex;
     justify-content: center;
@@ -37,7 +70,6 @@ header {
     text-align: center;
     padding-left: 150px;
     padding-right: 150px;
-    margin-bottom: 200px;
 }
 
 #topics a {
@@ -46,7 +78,7 @@ header {
 
 #topics a:hover {
     font-weight: 600;
-    background-color: yellow;
+    background-color: #f7ef8a;
 }
 
 #topics li {
@@ -76,9 +108,13 @@ header {
 }
 
 .highlight {
+<<<<<<< HEAD
     background-color: yellow;
     padding-left: 4px;
     padding-right: 4px;
+=======
+    background-color: #f7ef8a;
+>>>>>>> d0070f353b46e6487727a38859b5235b9140a913
 }
 
 .big-question {
