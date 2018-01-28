@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +10,13 @@ body {
     background-color: #fdfffc;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
-    color: grey;
-}
-
-a:hover {
     color: black;
 }
 
-a:visited {
-    color:grey;
+a:hover {
+    color: rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -35,7 +30,6 @@ header {
     from {width: 0 }
     to {width: 100%}
 }
-
 
 header, h1 {
     -webkit-animation: fadein 1s; // Safari, Chrome and Opera > 12.1 
@@ -78,7 +72,7 @@ body, a {
 
 #topics a:hover {
     font-weight: 600;
-    background-color: #f7ef8a;
+    background-color: yellow;
 }
 
 #topics li {
@@ -96,30 +90,72 @@ body, a {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 400px;
+    width: 35%;
 }
 
-.column h1{
+.column h1 {
+    font-weight: 200;
+    margin-bottom: 5px;
+    font-size: 2.4em;
+}
+
+.column .subtitle {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.article-title {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.article-desc {
+    margin-bottom: 10px;
     font-weight: 200;
 }
 
-.article {
-    margin-bottom: 20px;
-}
-
 .highlight {
-<<<<<<< HEAD
     background-color: yellow;
     padding-left: 4px;
     padding-right: 4px;
-=======
-    background-color: #f7ef8a;
->>>>>>> d0070f353b46e6487727a38859b5235b9140a913
 }
 
 .big-question {
     display: flex;
     justify-content: center;
-    font-size: 18px;
     margin-bottom: 100px;
+}
+
+/* Bootstrap progress bar*/
+
+.progress {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 20px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#blue-bar {
+    background-color: #0c3e9b;
+}
+
+#red-bar {
+    background-color: #ba1307;
 }
