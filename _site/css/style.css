@@ -22,7 +22,7 @@ a:hover {
 header {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 36px;
 }
 
@@ -57,9 +57,32 @@ body, a {
 }
 
 footer {
+    position: relative;
+    align-content: center;
+    bottom: 0;
+    width: 100%;
+    display: flex;
     text-align: center;
-    margin-bottom: 15%;
+    justify-content: center;
+    padding-bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
+
+.fixed-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+
+#logo img {
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
 
 #topics {
     display: flex;
@@ -130,6 +153,7 @@ footer {
     display: flex;
     justify-content: center;
     font-size: 1.3em;
+    margin-bottom: 10%;
 }
 
 /* Bootstrap progress bar*/
