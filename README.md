@@ -1,7 +1,7 @@
 # Middle Ground
 This web app presents a non-biased perspective on political issues by featuring articles on either side of the debate, allowing the user to make an informed opinion on the subject. Our goal is to empower people who are subjected to the echo chambers of social media platforms to grow more conscious of other perspectives.
 
-Built at SheHacks Boston 2018 by [@chanlis](https://github.com/chanlis), [@cho-e](https://github.com/cho-e), [@meganla](https://github.com/meganla), [@ctlwng](https://github.com/ctlwng), and [@wongjwm](https://github.com/wongjwm).
+Built at SheHacks Boston 2018 by [@chanlis](https://github.com/chanlis), [@cho-e](https://github.com/cho-e), [@meganla](https://github.com/meganla), [@ctlwng](https://github.com/ctlnwng), and [@wongjwm](https://github.com/wongjwm).
 
 ## How we built it
 - Parsed and retrieved news articles from the [News API](https://newsapi.org/).
