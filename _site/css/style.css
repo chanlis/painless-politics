@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +61,12 @@ body, a {
     to   { opacity: 1; }
 }
 
+footer {
+    text-align: center;
+    
+}
+
+
 #topics {
     display: flex;
     justify-content: center;
@@ -78,7 +83,7 @@ body, a {
 
 #topics a:hover {
     font-weight: 600;
-    background-color: #f7ef8a;
+    background-color: yellow;
 }
 
 #topics li {
@@ -108,13 +113,9 @@ body, a {
 }
 
 .highlight {
-<<<<<<< HEAD
     background-color: yellow;
     padding-left: 4px;
     padding-right: 4px;
-=======
-    background-color: #f7ef8a;
->>>>>>> d0070f353b46e6487727a38859b5235b9140a913
 }
 
 .big-question {
@@ -123,3 +124,4 @@ body, a {
     font-size: 18px;
     margin-bottom: 100px;
 }
+
