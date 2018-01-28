@@ -77,6 +77,8 @@ header {
 
 .highlight {
     background-color: yellow;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .big-question {
