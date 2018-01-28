@@ -2,7 +2,7 @@
 function getArticles(topic) {
     var url = 'https://newsapi.org/v2/everything?' +
         'q=' + topic + '&' +
-        'from=2017-10-01&' +
+        'from=2017-01-01&' +
         'sortBy=popularity&' +
         'apiKey=4fa5e1cdae464d49aece432257159068';
 
@@ -39,7 +39,8 @@ function classifyArticles(topic) {
     var right = [];
 
     getArticles(topic).then((articles) => {
-
+        var leftcounter = 0;
+        var rightcounter = 0;
         for (var i = 0; i < articles.length; i++) {
             getPoliAnalysis(articles[i]).then((articleAndResults) => {
 
@@ -48,7 +49,7 @@ function classifyArticles(topic) {
 
                 var articleHtml; 
 
-                if (r.Liberal > 0.5) {
+                if (r.Liberal > 0.3 && r.Liberal > r.Conservative && leftcounter < 3) {
 
                     a.leaning = r.Liberal;
 
@@ -57,8 +58,9 @@ function classifyArticles(topic) {
                     "<p>" + a.leaning + "</p>";
                     
                     document.getElementById("left").insertAdjacentHTML('beforeend', articleHtml);
+                    leftcounter++;
                 }
-                else if (r.Conservative > 0.4) {
+                else if (r.Conservative > 0.2 && rightcounter < 3) {
 
                     a.leaning = r.Conservative;
 
@@ -67,7 +69,9 @@ function classifyArticles(topic) {
                     "<p>" + a.leaning + "</p>";
 
                     document.getElementById("right").insertAdjacentHTML('beforeend', articleHtml);
+                    rightcounter++;
                 }
+            
             }
         )
     }

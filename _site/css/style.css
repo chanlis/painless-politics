@@ -61,6 +61,12 @@ body, a {
     to   { opacity: 1; }
 }
 
+footer {
+    text-align: center;
+    
+}
+
+
 #topics {
     display: flex;
     justify-content: center;
@@ -77,7 +83,7 @@ body, a {
 
 #topics a:hover {
     font-weight: 600;
-    background-color: #f7ef8a;
+    background-color: yellow;
 }
 
 #topics li {
