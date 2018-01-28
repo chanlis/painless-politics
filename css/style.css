@@ -39,10 +39,10 @@ header, h1 {
 }
 
 body, a {
-    -webkit-animation: fadein 2s; // Safari, Chrome and Opera > 12.1 
-       -moz-animation: fadein 2s; // Firefox < 16 
-        -ms-animation: fadein 2s; // Internet Explorer 
-            animation: fadein 2s;
+    -webkit-animation: fadein 1s; // Safari, Chrome and Opera > 12.1 
+       -moz-animation: fadein 1s; // Firefox < 16 
+        -ms-animation: fadein 1s; // Internet Explorer 
+            animation: fadein 1s;
 }
 
 @keyframes fadein {
@@ -55,6 +55,12 @@ body, a {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+footer {
+    text-align: center;
+    
+}
+
 
 #topics {
     display: flex;
@@ -158,4 +164,34 @@ body, a {
 
 #red-bar {
     background-color: #ba1307;
+}
+
+.back-button {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    z-index: 5  ;
+    font-size: 36px;
+    color: grey;
+
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+}
+
+.back-button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.center {
+    position: absolute;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
