@@ -22,7 +22,7 @@ a:hover {
 header {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 10%;
     font-size: 36px;
 }
 
@@ -58,9 +58,8 @@ body, a {
 
 footer {
     text-align: center;
-    
+    margin-bottom: 15%;
 }
-
 
 #topics {
     display: flex;
@@ -68,8 +67,6 @@ footer {
     font-weight: 200;
     font-size: 30px;
     text-align: center;
-    padding-left: 150px;
-    padding-right: 150px;
 }
 
 #topics a {
@@ -77,7 +74,6 @@ footer {
 }
 
 #topics a:hover {
-    font-weight: 600;
     background-color: yellow;
 }
 
@@ -90,6 +86,7 @@ footer {
 .articleBlock {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .column {
@@ -132,7 +129,7 @@ footer {
 .big-question {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    font-size: 1.3em;
 }
 
 /* Bootstrap progress bar*/
@@ -165,6 +162,7 @@ footer {
 #red-bar {
     background-color: #ba1307;
 }
+
 .back-button {
     position: fixed;
     top: 3%;

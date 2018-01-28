@@ -55,9 +55,9 @@ function classifyArticles(topic) {
 
                     pct = Math.floor(a.leaning * 100) + '%';
 
-                    articleHtml = "<a href=\'" + a.url + "\' class=\'article-title\'><p>" + a.title + "</p></a>" +
-                    "<p class=\'article-desc\'>" + a.description + "</p><div class=\"progress\">" +
-                    "<div id=\"blue-bar\" class=\"progress-bar\" style=\"width:" + pct + "\">" + pct + "</div></div>";
+                    articleHtml = "<a href=\'" + a.url + "\' target=\'_blank\' class=\'article-title\'><p>" + a.title + "</p></a>" +
+                    "<p class=\'article-desc\'>" + a.description + "</p><div class=\'progress\'>" +
+                    "<div id=\'blue-bar\' class=\'progress-bar\' style=\'width:" + pct + "\'>" + pct + "</div></div>";
 
                     document.getElementById("left").insertAdjacentHTML('beforeend', articleHtml);
                     leftcounter++;
@@ -68,9 +68,9 @@ function classifyArticles(topic) {
 
                     pct = Math.floor(a.leaning * 100) + '%';
 
-                    articleHtml = "<a href=\'" + a.url + "\' class=\'article-title\'><p>" + a.title + "</p></a>" +
-                    "<p class=\'article-desc\'>" + a.description + "</p><div class=\"progress\">" +
-                    "<div id=\"red-bar\" class=\"progress-bar\" style=\"width:" + pct + "\">" + pct + "</div></div>";
+                    articleHtml = "<a href=\'" + a.url + "\' target=\'_blank\' class=\'article-title\'><p>" + a.title + "</p></a>" +
+                    "<p class=\'article-desc\'>" + a.description + "</p><div class=\'progress\'>" +
+                    "<div id=\'red-bar\' class=\'progress-bar\' style=\'width:" + pct + "\'>" + pct + "</div></div>";
 
 
                     document.getElementById("right").insertAdjacentHTML('beforeend', articleHtml);
