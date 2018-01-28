@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -108,13 +107,9 @@ body, a {
 }
 
 .highlight {
-<<<<<<< HEAD
     background-color: yellow;
     padding-left: 4px;
     padding-right: 4px;
-=======
-    background-color: #f7ef8a;
->>>>>>> d0070f353b46e6487727a38859b5235b9140a913
 }
 
 .big-question {
