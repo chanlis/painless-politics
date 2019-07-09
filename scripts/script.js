@@ -22,15 +22,12 @@ function getArticles(topic) {
 
 function getPoliAnalysis(article) {
    return  $.post(
-        'https://apiv2.indico.io/political',
+        'https://cors-anywhere.herokuapp.com/https://apiv2.indico.io/political',
         JSON.stringify({
             'api_key': "5ca06cad390d60fb18f065997d116866",
             'data': article.description+article.title
         })
-    ).then(function (res) {
-        var r = JSON.parse(res);
-        return [article, r.results];
-    })
+    ).then(res => [article, res.results]);
 }
 
 function classifyArticles(topic) {
