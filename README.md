@@ -15,7 +15,7 @@ You can find the app runnning at [https://middle-ground.herokuapp.com](https://m
 ## Running this locally
 - Install Ruby version 2.2.5 or above. Check the current version downloaded with `ruby -v`. Follow the download instructions here: [Installing Ruby](https://www.ruby-lang.org/en/documentation/installation/).
 - Install RubyGems. Follow the instructions here: [RubyGems](https://rubygems.org/pages/download).
-- Clone this repo using `git clone https://github.com/chanlis/painless-politics.git` and `cd painless-politics`.
+- Clone this repo using `git clone https://github.com/chanlis/middle-ground.git` and `cd middle-ground`.
 - Run `jekyll serve`
 - Visit the web app from the server address generated in a browser.
 
