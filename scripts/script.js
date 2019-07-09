@@ -2,7 +2,6 @@
 function getArticles(topic) {
     var url = 'https://newsapi.org/v2/everything?' +
         'q=' + topic + '&' +
-        'from=2017-01-01&' +
         'sortBy=popularity&' +
         'apiKey=4fa5e1cdae464d49aece432257159068';
 
